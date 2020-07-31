@@ -46,7 +46,7 @@ function truncateString(str, num, suf) {
   const lines = weekData.slice(0, 5).reduce((prev, cur, index) => {
     const playCount = cur.playCount;
     const artists = cur.song.ar.map(a => a.name);
-    let name = `${cur.song.name} - ${artists.join('/')}`;
+    let name = `${cur.song.name} - ${artists[0]}`;
 
     const line = [
       icon[index].padEnd(2),
@@ -76,7 +76,7 @@ function truncateString(str, num, suf) {
       gist_id: gistId,
       files: {
         [filename]: {
-          filename: `🎵 My last week in music`,
+          filename: `🎵 My last week in Music`,
           content: lines.join('\n'),
         },
       },
