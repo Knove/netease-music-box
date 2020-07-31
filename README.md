@@ -1,2 +1,1 @@
-# netease-music-box
- 
+# Netease Music Box
